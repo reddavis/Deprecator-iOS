@@ -11,13 +11,12 @@ import Mockingjay
 @testable import Deprecator
 
 
-class RequiredAndPreferredDeprecationTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
+class PreferredDeprecationTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
 {
     // Private
     private let requiredDeprecatorURL = NSURL(string: "http://red.to/required")!
     private var deprecator: Deprecator!
     
-    private var requiredDeprecationExpectation: XCTestExpectation?
     private var preferredDeprecationExpectation: XCTestExpectation?
     
     // MARK: -
@@ -39,12 +38,11 @@ class RequiredAndPreferredDeprecationTests: XCTestCase, DeprecatorDelegate, Depr
     
     // MARK: -
     
-    func testFindingDeprecation()
+    func testFindingPreferredDeprecation()
     {
         self.deprecator = Deprecator(deprecationURL: self.requiredDeprecatorURL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.requiredDeprecationExpectation = self.expectationWithDescription("required deprecation")
         self.preferredDeprecationExpectation = self.expectationWithDescription("preferred deprecation")
         self.deprecator.checkForDeprecations()
         
@@ -55,9 +53,7 @@ class RequiredAndPreferredDeprecationTests: XCTestCase, DeprecatorDelegate, Depr
     
     func deprecator(deprecator: Deprecator, didFindRequiredDeprecation deprecation: Deprecator.Deprecation)
     {
-        XCTAssertEqual(deprecation.languages.count, 2)
-        
-        self.requiredDeprecationExpectation?.fulfill()
+
     }
     
     func deprecator(deprecator: Deprecator, didFindPreferredDeprecation deprecation: Deprecator.Deprecation)
@@ -81,6 +77,6 @@ class RequiredAndPreferredDeprecationTests: XCTestCase, DeprecatorDelegate, Depr
     
     func currentBuildNumber(deprecator: Deprecator) -> Int
     {
-        return 0
+        return 60
     }
 }

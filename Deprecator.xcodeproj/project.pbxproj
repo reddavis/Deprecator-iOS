@@ -10,6 +10,7 @@
 		A45B69511D2D5B5C0011D536 /* NoDeprecationFoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B69501D2D5B5C0011D536 /* NoDeprecationFoundTests.swift */; };
 		A45B69571D2E9A3B0011D536 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B69561D2E9A3B0011D536 /* Error.swift */; };
 		A45B69591D2E9A570011D536 /* Deprecation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B69581D2E9A570011D536 /* Deprecation.swift */; };
+		A492334B1D83132800218E2A /* PreferredDeprecationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492334A1D83132800218E2A /* PreferredDeprecationTests.swift */; };
 		A4B804631D2EA412000A50BF /* MalformedJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B804621D2EA412000A50BF /* MalformedJSONTests.swift */; };
 		A4B804651D2FD330000A50BF /* missing_build_number.json in Resources */ = {isa = PBXBuildFile; fileRef = A4B804641D2FD330000A50BF /* missing_build_number.json */; };
 		A4B804671D2FDB0F000A50BF /* missing_url.json in Resources */ = {isa = PBXBuildFile; fileRef = A4B804661D2FDB0F000A50BF /* missing_url.json */; };
@@ -19,7 +20,7 @@
 		A4B8046F1D2FF016000A50BF /* default_language_not_included.json in Resources */ = {isa = PBXBuildFile; fileRef = A4B8046E1D2FF016000A50BF /* default_language_not_included.json */; };
 		A4D31E931D2A937C008FE1D7 /* Deprecator.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D31E921D2A937C008FE1D7 /* Deprecator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4D31E9A1D2A937C008FE1D7 /* Deprecator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D31E8F1D2A937C008FE1D7 /* Deprecator.framework */; };
-		A4D31E9F1D2A937C008FE1D7 /* RequiredAndPreferredDeprecationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D31E9E1D2A937C008FE1D7 /* RequiredAndPreferredDeprecationTests.swift */; };
+		A4D31E9F1D2A937C008FE1D7 /* RequiredDeprecationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D31E9E1D2A937C008FE1D7 /* RequiredDeprecationTests.swift */; };
 		A4D31EAC1D2A9616008FE1D7 /* Deprecator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D31EAB1D2A9616008FE1D7 /* Deprecator.swift */; };
 		A4D31EAE1D2ABAC7008FE1D7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A4D31EAD1D2ABAC7008FE1D7 /* Podfile */; };
 		A4D31EB11D2AC3FC008FE1D7 /* required_deprecation.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D31EB01D2AC3FC008FE1D7 /* required_deprecation.json */; };
@@ -42,6 +43,7 @@
 		A45B69501D2D5B5C0011D536 /* NoDeprecationFoundTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDeprecationFoundTests.swift; sourceTree = "<group>"; };
 		A45B69561D2E9A3B0011D536 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A45B69581D2E9A570011D536 /* Deprecation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecation.swift; sourceTree = "<group>"; };
+		A492334A1D83132800218E2A /* PreferredDeprecationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferredDeprecationTests.swift; sourceTree = "<group>"; };
 		A4B804621D2EA412000A50BF /* MalformedJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalformedJSONTests.swift; sourceTree = "<group>"; };
 		A4B804641D2FD330000A50BF /* missing_build_number.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missing_build_number.json; sourceTree = "<group>"; };
 		A4B804661D2FDB0F000A50BF /* missing_url.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missing_url.json; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		A4D31E921D2A937C008FE1D7 /* Deprecator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deprecator.h; sourceTree = "<group>"; };
 		A4D31E941D2A937C008FE1D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D31E991D2A937C008FE1D7 /* DeprecatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeprecatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4D31E9E1D2A937C008FE1D7 /* RequiredAndPreferredDeprecationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredAndPreferredDeprecationTests.swift; sourceTree = "<group>"; };
+		A4D31E9E1D2A937C008FE1D7 /* RequiredDeprecationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredDeprecationTests.swift; sourceTree = "<group>"; };
 		A4D31EA01D2A937C008FE1D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D31EAB1D2A9616008FE1D7 /* Deprecator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecator.swift; sourceTree = "<group>"; };
 		A4D31EAD1D2ABAC7008FE1D7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -132,7 +134,8 @@
 		A4D31E9D1D2A937C008FE1D7 /* DeprecatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A4D31E9E1D2A937C008FE1D7 /* RequiredAndPreferredDeprecationTests.swift */,
+				A4D31E9E1D2A937C008FE1D7 /* RequiredDeprecationTests.swift */,
+				A492334A1D83132800218E2A /* PreferredDeprecationTests.swift */,
 				A45B69501D2D5B5C0011D536 /* NoDeprecationFoundTests.swift */,
 				A4B804621D2EA412000A50BF /* MalformedJSONTests.swift */,
 				A4D31EA01D2A937C008FE1D7 /* Info.plist */,
@@ -344,7 +347,8 @@
 			files = (
 				A4B804631D2EA412000A50BF /* MalformedJSONTests.swift in Sources */,
 				A45B69511D2D5B5C0011D536 /* NoDeprecationFoundTests.swift in Sources */,
-				A4D31E9F1D2A937C008FE1D7 /* RequiredAndPreferredDeprecationTests.swift in Sources */,
+				A492334B1D83132800218E2A /* PreferredDeprecationTests.swift in Sources */,
+				A4D31E9F1D2A937C008FE1D7 /* RequiredDeprecationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -472,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
