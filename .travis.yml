@@ -2,3 +2,6 @@ language: objective-c
 xcode_workspace: Deprecator.xcworkspace
 xcode_scheme: Deprecator
 osx_image: xcode7.3
+
+script:
+  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
