@@ -1,5 +1,7 @@
 # Deprecator
 
+[![Build Status](https://travis-ci.org/togethera/Deprecator-iOS.svg?branch=master)](https://travis-ci.org/togethera/Deprecator-iOS)
+
 **Deprecation handler for iOS**
 
 Deprecator automatically handles version checking against a hosted JSON file and handles soft and hard deprecation of old release builds of your app.
