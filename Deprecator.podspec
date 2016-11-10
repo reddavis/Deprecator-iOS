@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "Deprecator"
-  s.version      = "0.9.0"
+  s.version      = "0.10.0"
   s.summary      = "Deprecator automatically handles version checking against a hosted JSON file."
   s.homepage     = "http://red.to"
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author             = { "Red Davis" => "me@red.to" }
   s.social_media_url   = "http://twitter.com/reddavis"
 
-  s.ios.deployment_target = "9.3"
+  s.ios.deployment_target = "10.0"
 
   s.source       = { :git => "https://github.com/togethera/Deprecator-iOS.git", :tag => "#{s.version}" }
   s.source_files = ['Deprecator']
