@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "10.0"
 
   s.source       = { :git => "https://github.com/togethera/Deprecator-iOS.git", :tag => "#{s.version}" }
-  s.source_files = ['Deprecator/Source/*.swift']
+  s.source_files = ['Deprecator/Classes/*.swift']
 end
