@@ -15,7 +15,7 @@ Deprecator automatically handles version checking against a hosted JSON file and
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 pod 'Deprecator', :git => 'TODO'
@@ -35,31 +35,26 @@ and a few data source and delegate methods:
 ```
 // MARK: DeprecatorDataSource
     
-func currentBuildNumber(deprecator: Deprecator) -> Int
-{
-	  //…
-}
-
-// MARK: DeprecatorDelegate
-
-func deprecator(deprecator: Deprecator, didFindRequiredDeprecation deprecation: Deprecator.Deprecation)
+func currentBuildNumber(for deprecator: Deprecator) -> Int
 {
     //…
 }
 
-func deprecator(deprecator: Deprecator, didFindPreferredDeprecation deprecation: Deprecator.Deprecation)
+// MARK: DeprecatorDelegate
+
+func didFind(deprecation: Deprecator.Deprecation, isRequired: Bool, in deprecator: Deprecator)
 {
-	  //…
+    //…
 }
 
-func deprecatorDidNotFindDeprecation(deprecator: Deprecator)
+func didFail(with error: Deprecator.DataError, in deprecator: Deprecator)
 {
-	  //…
+    //…
 }
 
-func deprecator(deprecator: Deprecator, didFailWithError error: Deprecator.Error)
+func didNotFindDeprecation(in deprecator: Deprecator)
 {
-	  //…
+    //…
 }
 ```
 
