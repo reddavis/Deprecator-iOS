@@ -14,10 +14,10 @@ import Mockingjay
 class RequiredDeprecationTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
 {
     // Private
-    private let requiredDeprecatorURL = NSURL(string: "http://red.to/required")!
-    private var deprecator: Deprecator!
+    fileprivate let requiredDeprecatorURL = URL(string: "http://red.to/required")!
+    fileprivate var deprecator: Deprecator!
     
-    private var requiredDeprecationExpectation: XCTestExpectation?
+    fileprivate var requiredDeprecationExpectation: XCTestExpectation?
     
     // MARK: -
     
@@ -26,9 +26,9 @@ class RequiredDeprecationTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSo
         super.setUp()
         
         // Stub HTTP requests
-        let requriedPath = NSBundle(forClass: self.dynamicType).pathForResource("required_deprecation", ofType: "json")!
-        let requiredData = NSData(contentsOfFile: requriedPath)!
-        stub(uri("/required"), builder: jsonData(requiredData))
+        let requriedPath = Bundle(for: type(of: self)).path(forResource: "required_deprecation", ofType: "json")!
+        let requiredData = try! Data(contentsOf: URL(fileURLWithPath: requriedPath))
+        stub(uri("/required"), jsonData(requiredData))
     }
     
     override func tearDown()
@@ -43,39 +43,40 @@ class RequiredDeprecationTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSo
         self.deprecator = Deprecator(deprecationURL: self.requiredDeprecatorURL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.requiredDeprecationExpectation = self.expectationWithDescription("required deprecation")
+        self.requiredDeprecationExpectation = self.expectation(description: "required deprecation")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     // MARK: DeprecatorDelegate
     
-    func deprecator(deprecator: Deprecator, didFindRequiredDeprecation deprecation: Deprecator.Deprecation)
+    func didFail(with error: Deprecator.DataError, in deprecator: Deprecator)
     {
-        XCTAssertEqual(deprecation.languages.count, 2)
-        
-        self.requiredDeprecationExpectation?.fulfill()
+        XCTFail("shouldn't be called")
     }
     
-    func deprecator(deprecator: Deprecator, didFindPreferredDeprecation deprecation: Deprecator.Deprecation)
+    func didFind(deprecation: Deprecator.Deprecation, isRequired: Bool, in deprecator: Deprecator)
     {
-        
+        if isRequired
+        {
+            XCTAssertEqual(deprecation.languages.count, 2)
+            self.requiredDeprecationExpectation?.fulfill()
+        }
+        else
+        {
+            XCTFail("Deprecation found, but it should be required")
+        }
     }
     
-    func deprecatorDidNotFindDeprecation(deprecator: Deprecator)
+    func didNotFindDeprecation(in deprecator: Deprecator)
     {
-        
-    }
-    
-    func deprecator(deprecator: Deprecator, didFailWithError error: Deprecator.Error)
-    {
-        
+        XCTFail("shouldn't be called")
     }
     
     // MARK: DeprecatorDataSource
     
-    func currentBuildNumber(deprecator: Deprecator) -> Int
+    func currentBuildNumber(for deprecator: Deprecator) -> Int
     {
         return 0
     }

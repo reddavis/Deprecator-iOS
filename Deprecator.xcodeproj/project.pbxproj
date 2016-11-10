@@ -22,8 +22,8 @@
 		A4D31E9A1D2A937C008FE1D7 /* Deprecator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D31E8F1D2A937C008FE1D7 /* Deprecator.framework */; };
 		A4D31E9F1D2A937C008FE1D7 /* RequiredDeprecationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D31E9E1D2A937C008FE1D7 /* RequiredDeprecationTests.swift */; };
 		A4D31EAC1D2A9616008FE1D7 /* Deprecator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D31EAB1D2A9616008FE1D7 /* Deprecator.swift */; };
-		A4D31EAE1D2ABAC7008FE1D7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A4D31EAD1D2ABAC7008FE1D7 /* Podfile */; };
 		A4D31EB11D2AC3FC008FE1D7 /* required_deprecation.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D31EB01D2AC3FC008FE1D7 /* required_deprecation.json */; };
+		A4E2EF821DD478BE00D220D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A4E2EF811DD478BE00D220D6 /* Podfile */; };
 		E20BC864C80228CCC38FF987 /* Pods_DeprecatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42B8B376EEC4BDDDBA3DF2C /* Pods_DeprecatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +58,8 @@
 		A4D31E9E1D2A937C008FE1D7 /* RequiredDeprecationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredDeprecationTests.swift; sourceTree = "<group>"; };
 		A4D31EA01D2A937C008FE1D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D31EAB1D2A9616008FE1D7 /* Deprecator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecator.swift; sourceTree = "<group>"; };
-		A4D31EAD1D2ABAC7008FE1D7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A4D31EB01D2AC3FC008FE1D7 /* required_deprecation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = required_deprecation.json; sourceTree = "<group>"; };
+		A4E2EF811DD478BE00D220D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		B42B8B376EEC4BDDDBA3DF2C /* Pods_DeprecatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeprecatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 				A4D31EA91D2A939A008FE1D7 /* Classes */,
 				A4D31E921D2A937C008FE1D7 /* Deprecator.h */,
 				A4D31E941D2A937C008FE1D7 /* Info.plist */,
-				A4D31EAD1D2ABAC7008FE1D7 /* Podfile */,
+				A4E2EF811DD478BE00D220D6 /* Podfile */,
 			);
 			path = Deprecator;
 			sourceTree = "<group>";
@@ -233,9 +233,11 @@
 				TargetAttributes = {
 					A4D31E8E1D2A937C008FE1D7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					A4D31E981D2A937C008FE1D7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -262,7 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D31EAE1D2ABAC7008FE1D7 /* Podfile in Resources */,
+				A4E2EF821DD478BE00D220D6 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B4961647C363D36CC077876F /* [CP] Embed Pods Frameworks */ = {
@@ -401,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,11 +467,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Deprecator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reddavis.Deprecator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -484,10 +488,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Deprecator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reddavis.Deprecator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -499,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reddavis.DeprecatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -510,6 +517,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reddavis.DeprecatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

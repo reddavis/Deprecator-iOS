@@ -1,7 +1,7 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
 target 'DeprecatorTests' do
-  pod 'Mockingjay'
+  pod 'Mockingjay', :git => 'git@github.com:kylef/Mockingjay.git'
 end

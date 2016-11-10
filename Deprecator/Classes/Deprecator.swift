@@ -8,41 +8,42 @@
 
 import UIKit
 
+// MARK: DeprecatorDelegate
 
-public protocol DeprecatorDelegate
+public protocol DeprecatorDelegate: class
 {
-    func deprecator(deprecator: Deprecator, didFindRequiredDeprecation deprecation: Deprecator.Deprecation)
-    func deprecator(deprecator: Deprecator, didFindPreferredDeprecation deprecation: Deprecator.Deprecation)
-    func deprecatorDidNotFindDeprecation(deprecator: Deprecator)
-    func deprecator(deprecator: Deprecator, didFailWithError error: Deprecator.Error)
+    func didFind(deprecation: Deprecator.Deprecation, isRequired: Bool, in deprecator: Deprecator)
+    func didNotFindDeprecation(in deprecator: Deprecator)
+    func didFail(with error: Deprecator.DataError, in deprecator: Deprecator)
 }
 
+// MARK: DeprecatorDataSource
 
-public protocol DeprecatorDataSource
+public protocol DeprecatorDataSource: class
 {
-    func currentBuildNumber(deprecator: Deprecator) -> Int
+    func currentBuildNumber(for deprecator: Deprecator) -> Int
 }
 
+// MARK: Deprecator
 
 public final class Deprecator
 {
     // Public
-    public var delegate: DeprecatorDelegate?
+    public weak var delegate: DeprecatorDelegate?
     
     // Private
-    private let dataSource: DeprecatorDataSource
+    private weak var dataSource: DeprecatorDataSource?
     
-    private let deprecationURL: NSURL
-    private let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+    private let deprecationURL: URL
+    private let session = URLSession(configuration: URLSessionConfiguration.default)
     
     // JSON Keys
     private let minimumUpdateKey = "minimum_update"
     private let preferredUpdateKey = "preferred_update"
     
-    
     // MARK: Initialization
     
-    public required init(deprecationURL: NSURL, dataSource: DeprecatorDataSource)
+    public required init(deprecationURL: URL, dataSource: DeprecatorDataSource)
     {
         self.deprecationURL = deprecationURL
         self.dataSource = dataSource
@@ -59,93 +60,82 @@ public final class Deprecator
     
     private func requestDeprecations()
     {
-        self.session.dataTaskWithURL(self.deprecationURL) { [weak self] (data, response, error) in
+        self.session.dataTask(with: self.deprecationURL, completionHandler: { [weak self] (data, response, error) in
             guard let weakSelf = self else { return }
             
             if let unwrappedError = error
             {
-                let HTTPError = Error.HTTPError(error: unwrappedError)
-                weakSelf.delegate?.deprecator(weakSelf, didFailWithError: HTTPError)
+                let HTTPError = DataError.httpError(error: unwrappedError)
+                weakSelf.delegate?.didFail(with: HTTPError, in: weakSelf)
                 
                 return
             }
             
             guard let unwrappedData = data else
             {
-                weakSelf.delegate?.deprecator(weakSelf, didFailWithError: Error.noDataReturned)
+                weakSelf.delegate?.didFail(with: DataError.noDataReturned, in: weakSelf)
                 return
             }
             
             // Let the delegate know whats going on
-            let currentBuildNumber = weakSelf.dataSource.currentBuildNumber(weakSelf)
+            let currentBuildNumber = weakSelf.dataSource!.currentBuildNumber(for: weakSelf)
             
             do
             {
-                let deprecations = try weakSelf.buildDeprecations(unwrappedData)
+                let deprecations = try weakSelf.buildDeprecations(with: unwrappedData)
                 var deprecationFound = false
                 
-                if let minimumDeprecation = deprecations.minimumDeprecation where minimumDeprecation.buildNumber > currentBuildNumber
+                if let minimumDeprecation = deprecations.minimumDeprecation, minimumDeprecation.buildNumber > currentBuildNumber
                 {
-                    weakSelf.delegate?.deprecator(weakSelf, didFindRequiredDeprecation: minimumDeprecation)
+                    weakSelf.delegate?.didFind(deprecation: minimumDeprecation, isRequired: true, in: weakSelf)
                     deprecationFound = true
                 }
                 
                 // First check that there is a preferred deprecation.
                 // If there is and a minumum deprecation then it takes priority
-                if let preferredDeprecation = deprecations.preferredDeprecation where preferredDeprecation.buildNumber > currentBuildNumber && deprecationFound == false
+                if let preferredDeprecation = deprecations.preferredDeprecation, preferredDeprecation.buildNumber > currentBuildNumber && deprecationFound == false
                 {
-                    weakSelf.delegate?.deprecator(weakSelf, didFindPreferredDeprecation: preferredDeprecation)
+                    weakSelf.delegate?.didFind(deprecation: preferredDeprecation, isRequired: false, in: weakSelf)
                     deprecationFound = true
                 }
                 
                 // No deprecations found
                 if !deprecationFound
                 {
-                    weakSelf.delegate?.deprecatorDidNotFindDeprecation(weakSelf)
+                    weakSelf.delegate?.didNotFindDeprecation(in: weakSelf)
                 }
             }
-            catch let JSONError as Error
+            catch let error as Deprecator.DataError
             {
-                weakSelf.delegate?.deprecator(weakSelf, didFailWithError: JSONError)
+                weakSelf.delegate?.didFail(with: error, in: weakSelf)
             }
-            catch
+            catch let error
             {
-                
+                let JSONError = Deprecator.DataError.JSONError(error: error)
+                weakSelf.delegate?.didFail(with: JSONError, in: weakSelf)
             }
-        }.resume()
+        }) .resume()
     }
     
-    private func buildDeprecations(JSONData: NSData) throws -> (minimumDeprecation: Deprecation?, preferredDeprecation: Deprecation?)
+    private func buildDeprecations(with JSONData: Data) throws -> (minimumDeprecation: Deprecation?, preferredDeprecation: Deprecation?)
     {
-        do
+        let JSON = try JSONSerialization.jsonObject(with: JSONData, options: [])
+        
+        // Minimum
+        var minimumDeprecation: Deprecation?
+        if let minimumJSON = (JSON as AnyObject).object(forKey: self.minimumUpdateKey) as? [String : AnyObject]
         {
-            let JSON = try NSJSONSerialization.JSONObjectWithData(JSONData, options: [])
-            
-            // Minimum
-            var minimumDeprecation: Deprecation?
-            if let minimumJSON = JSON.objectForKey(self.minimumUpdateKey) as? [String : AnyObject]
-            {
-            
-                minimumDeprecation = try Deprecation(JSON: minimumJSON)
-            }
-            
-            // Preferred
-            var preferredDeprecation: Deprecation?
-            if let preferredJSON = JSON.objectForKey(self.preferredUpdateKey) as? [String : AnyObject]
-            {
-                preferredDeprecation = try Deprecation(JSON: preferredJSON)
-            }
-            
-            return (minimumDeprecation, preferredDeprecation)
+        
+            minimumDeprecation = try Deprecation(JSON: minimumJSON)
         }
-        catch let JSONError as Error
+        
+        // Preferred
+        var preferredDeprecation: Deprecation?
+        if let preferredJSON = (JSON as AnyObject).object(forKey: self.preferredUpdateKey) as? [String : AnyObject]
         {
-            throw JSONError
+            preferredDeprecation = try Deprecation(JSON: preferredJSON)
         }
-        catch
-        {
-            return (nil, nil)
-        }
+        
+        return (minimumDeprecation, preferredDeprecation)
     }
 }
-

@@ -11,11 +11,12 @@ import Foundation
 
 public extension Deprecator
 {
-    public enum Error: ErrorType
+    public enum DataError: Error
     {
         case noDataReturned
-        case HTTPError(error: NSError)
-        case missingAttribute(attribute: String, providedJSON: [String : AnyObject])
+        case httpError(error: Error)
+        case JSONError(error: Error)
+        case missingAttribute(attribute: String, providedJSON: [String : Any])
         case invalidURL(providedURL: String)
         case missingDefaultLanguageStrings
     }

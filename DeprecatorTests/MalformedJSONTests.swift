@@ -11,7 +11,7 @@ import Mockingjay
 @testable import Deprecator
 
 
-class MalformedJSONTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
+internal class MalformedJSONTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
 {
     // Private
     private var deprecator: Deprecator!
@@ -24,7 +24,7 @@ class MalformedJSONTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
     private var missingStringsExpectation: XCTestExpectation?
     private var defaultLanguageNotIncludedExpectation: XCTestExpectation?
     
-    // MARK: -
+    // MARK: Setup
     
     override func setUp()
     {
@@ -42,144 +42,131 @@ class MalformedJSONTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
     func testHTTPError()
     {
         let error = NSError(domain: "", code: 0, userInfo: nil)
-        self.stub(everything, builder: failure(error))
+        self.stub(everything, failure(error))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.HTTPErrorExpectation = self.expectationWithDescription("no deprecation")
+        self.HTTPErrorExpectation = self.expectation(description: "no deprecation")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testMissingBuildNumberError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("missing_build_number", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "missing_build_number", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.missingBuildNumberExpectation = self.expectationWithDescription("no build number")
+        self.missingBuildNumberExpectation = self.expectation(description: "no build number")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testMissingURLError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("missing_url", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "missing_url", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.missingURLExpectation = self.expectationWithDescription("no URL")
+        self.missingURLExpectation = self.expectation(description: "no URL")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testInvalidURLError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("invalid_url", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "invalid_url", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.invalidURLExpectation = self.expectationWithDescription("invalid URL")
+        self.invalidURLExpectation = self.expectation(description: "invalid URL")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testMissingDefaultLanguageError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("missing_default_language", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "missing_default_language", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.missingDefaultLanguageExpectation = self.expectationWithDescription("missing default language")
+        self.missingDefaultLanguageExpectation = self.expectation(description: "missing default language")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testMissingStringsError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("missing_strings", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "missing_strings", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.missingStringsExpectation = self.expectationWithDescription("missing strings")
+        self.missingStringsExpectation = self.expectation(description: "missing strings")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     func testDefaultLanguageNotIncludedError()
     {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("default_language_not_included", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
+        let path = Bundle(for: type(of: self)).path(forResource: "default_language_not_included", ofType: "json")!
+        let data = try! Data(contentsOf: Foundation.URL(fileURLWithPath: path))
         
-        self.stub(everything, builder: jsonData(data))
+        self.stub(everything, jsonData(data))
         
-        let URL = NSURL(string: "http://red.to")!
+        let URL = Foundation.URL(string: "http://red.to")!
         self.deprecator = Deprecator(deprecationURL: URL, dataSource: self)
         self.deprecator.delegate = self
         
-        self.defaultLanguageNotIncludedExpectation = self.expectationWithDescription("default language not included")
+        self.defaultLanguageNotIncludedExpectation = self.expectation(description: "default language not included")
         self.deprecator.checkForDeprecations()
         
-        self.waitForExpectationsWithTimeout(2.0, handler: nil)
+        self.waitForExpectations(timeout: 2.0, handler: nil)
     }
     
     // MARK: DeprecatorDelegate
     
-    func deprecator(deprecator: Deprecator, didFindRequiredDeprecation deprecation: Deprecator.Deprecation)
-    {
-        XCTAssertTrue(false, "shouldn't be called")
-    }
-    
-    func deprecator(deprecator: Deprecator, didFindPreferredDeprecation deprecation: Deprecator.Deprecation)
-    {
-        XCTAssertTrue(false, "shouldn't be called")
-    }
-    
-    func deprecatorDidNotFindDeprecation(deprecator: Deprecator)
-    {
-        XCTAssertTrue(false, "shouldn't be called")
-    }
-    
-    func deprecator(deprecator: Deprecator, didFailWithError error: Deprecator.Error)
+    func didFail(with error: Deprecator.DataError, in deprecator: Deprecator)
     {
         switch error
         {
-        case .HTTPError(_):
+        case .httpError(_):
             self.HTTPErrorExpectation?.fulfill()
         case let .missingAttribute(attribute, _):
+            print(attribute)
+            
             if let expectation = self.missingBuildNumberExpectation
             {
                 XCTAssertEqual(attribute, "build_number")
@@ -210,12 +197,21 @@ class MalformedJSONTests: XCTestCase, DeprecatorDelegate, DeprecatorDataSource
         default:()
             
         }
-        
+    }
+    
+    func didFind(deprecation: Deprecator.Deprecation, isRequired: Bool, in deprecator: Deprecator)
+    {
+        XCTFail("shouldn't be called")
+    }
+    
+    func didNotFindDeprecation(in deprecator: Deprecator)
+    {
+        XCTFail("shouldn't be called")
     }
     
     // MARK: DeprecatorDataSource
     
-    func currentBuildNumber(deprecator: Deprecator) -> Int
+    func currentBuildNumber(for deprecator: Deprecator) -> Int
     {
         return 0
     }

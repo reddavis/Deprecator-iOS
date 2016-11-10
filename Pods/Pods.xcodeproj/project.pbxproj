@@ -7,160 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14DCA4093841D345C0D2CF8E02518CD6 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D477E3923D7B839A6C111BCA0974F9 /* Matchers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		15AC3950ECBA88277E7BC3545F6D65B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A4810E583E890297D6F2449E7DBC47 /* Foundation.framework */; };
-		1650D9BD0C57CD0557D041D5BD9B13DB /* Pods-DeprecatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5348188678A64A9D3C17A73E75061 /* Pods-DeprecatorTests-dummy.m */; };
-		181D893AA6D8060666F173ADAB984C65 /* Mockingjay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003A51EB46E0998B045EC4FFC72E6D39 /* Mockingjay-dummy.m */; };
-		1BDB08A3CFDC7BAAD15BA6D0E2553A4C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4DC5E1F96BF0CB8779ADD1FBF33FD0 /* XCTest.framework */; };
-		2467186C5AB5BDADAC427E838E308BB5 /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AA22B0F818643B011561B366BC805 /* URITemplate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2BCEC32E268B4859FA853275A7BC740C /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75DC0180FF786242F81989C59303F5 /* XCTest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3574C3B265948B3430E52E29B59BFCA8 /* Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A919A7A62A3FD7EA78360971E9F42D5 /* Builders.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		509FB987182D4E7E5F55F7EC1DC7F385 /* MockingjayURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC9CA4961F92D0531D693CEA680A7B /* MockingjayURLSessionConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		53A161A7DD7B757D06DA6D97AA12D2CB /* MockingjayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95238BDE3E667246E679C9183B2C0FE3 /* MockingjayProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7112BA53693B63EAC5FF0C4DC6EB3862 /* URITemplate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A6DE00CCDAFF968AA7D1857F8AF9353 /* URITemplate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		725E9857C7BBC381198E4210A082E77B /* URITemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 94BE6895EF7ACD387976129BFDDE1A6A /* URITemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		779B719FB658D85BAB9460E9A5674B76 /* Mockingjay.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0DA7CFCD498D22607BE1D60EAF1C6E /* Mockingjay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A2DFF196C57BB58DFBAB61C301931BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A4810E583E890297D6F2449E7DBC47 /* Foundation.framework */; };
-		7E9EC8D62D2BFF5F6397C8CC88FDA49C /* URITemplate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA08456E982F68EAF2039035B05C07C4 /* URITemplate-dummy.m */; };
-		84A8540A2A9F2A4882B0F544C990D91E /* Mockingjay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC64631EA72FEECB80204D8199776353 /* Mockingjay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D032DBF13C563DB910B9A611E63C84E /* Mockingjay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C734B5211887895E662189C1DDC6AF /* Mockingjay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B0FEE7CC4D7D012A95A7E8908ADF60E1 /* Pods-DeprecatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C87F32BBF318D370593C84781859BB /* Pods-DeprecatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7D48E77755D6A8DF8FB0CF52CA5D103 /* NSURLSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43460DD227173A1501B696191C1FE788 /* NSURLSessionConfiguration.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CF5F7EE8BCEFDD735EF8B5F744731345 /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4F79849556C25CED115FE8F04F89A /* URITemplate.framework */; };
-		EBA5111B9B71BAAEFD52B331F7A3C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A4810E583E890297D6F2449E7DBC47 /* Foundation.framework */; };
+		0EFEDEF1A7A04A85F70C1884E4C140B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7105459689E5A63F5AB60CEA452F59B9 /* Foundation.framework */; };
+		0FC2ED3AAB8A130CF1BE1B7663732271 /* Mockingjay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AB842D2DC6ED23EB1A6E8E8A4A686 /* Mockingjay-dummy.m */; };
+		340E892E4635BFF3C198D356C4AC854C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7105459689E5A63F5AB60CEA452F59B9 /* Foundation.framework */; };
+		47AC330AA7F81E96C72BADE17A77EEA4 /* MockingjayURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438486DFE2D0C79932D535F5D937F9B /* MockingjayURLSessionConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4803B65FCC48EAE5D2074AAE5C256500 /* Pods-DeprecatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C87F32BBF318D370593C84781859BB /* Pods-DeprecatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51A81325D6F4A1CB9F7550705CB5E384 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B484A9C8F1C77990201A19A97D8D2FC /* XCTest.framework */; };
+		56E33CA48F7DC412F5B86903E4F8A2CE /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1264E1BFE43C3B59D4741D9124A1A /* URITemplate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69627B1284EB3494300C000F0C03823E /* URITemplate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54360CDBA048B25288565A036911E1A9 /* URITemplate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E403FCCDF1CCD66C52D9D9CDCE59E2B /* Pods-DeprecatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5348188678A64A9D3C17A73E75061 /* Pods-DeprecatorTests-dummy.m */; };
+		7B23A0EC59F70B42FA0DC9885CEA2F21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7105459689E5A63F5AB60CEA452F59B9 /* Foundation.framework */; };
+		9869167E9D1988EF5CC81A18DFDB34D9 /* URITemplate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 875A155F7D119F337625A4175E26D2FD /* URITemplate-dummy.m */; };
+		A1136007D0AE6FA6A4880E97642D1E49 /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4F79849556C25CED115FE8F04F89A /* URITemplate.framework */; };
+		A37941A8CB691DD6810DBF122FBC6AFC /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5680D982D267DF3B2A1536E71F6B6BFB /* XCTest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A772772A87F6C0A6F0784A6288A80339 /* Mockingjay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01B0F8607D100147717A515FF61A58BC /* Mockingjay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5C6D6A05183B48CFD66AC7DB62C01E0 /* NSURLSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881284F9F20DF10ADFBD0C37747ED5E /* NSURLSessionConfiguration.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C5B8A87F3C625A850B29F5324A5FDFB3 /* MockingjayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C10F94A2239CC7D7AA19C256E62AD2 /* MockingjayProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C9C68C36E37E329E102FD6FB1D4DEB11 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CA8F2BAD4C462B1E03F1197FF3C28 /* Matchers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D933E04ADE77BD7D1D60FF310E21CF96 /* Mockingjay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20BCD9553D4B6C226CB6B2F03E305A /* Mockingjay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E141F8C5C74F5EE4F7E703D5C0E812BC /* Mockingjay.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D3DBC691933A00ECB73AD663561868 /* Mockingjay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF6F0F9C921A0E83B121AA9DCE9B2C2E /* Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EBBB3A03BF087FFE9D8336F77384E /* Builders.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		415D56258760259BC516F747B8055DBC /* PBXContainerItemProxy */ = {
+		02627CFCE2210FAE6A0CDA9960B8AF0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7DB2A7BABD37B67AF7A062F2EB7344AA;
-			remoteInfo = URITemplate;
-		};
-		B7B1F92F7E99536ED11599DCDD364FAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7DB2A7BABD37B67AF7A062F2EB7344AA;
-			remoteInfo = URITemplate;
-		};
-		D1A79DA46DDBA70DEA52FDC685DCE806 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E31B3D9B406E3BDB5B76F5E88E778F39;
+			remoteGlobalIDString = 5BAACC736A5215103E10E2DC0A74FDCD;
 			remoteInfo = Mockingjay;
+		};
+		37BFFDAAA0C4330B0981D7AB5E102997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAEE407D509A3F67350A21DD9179E25;
+			remoteInfo = URITemplate;
+		};
+		9E61E595C13C1AC308CC3B84ECE1D255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAEE407D509A3F67350A21DD9179E25;
+			remoteInfo = URITemplate;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003A51EB46E0998B045EC4FFC72E6D39 /* Mockingjay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mockingjay-dummy.m"; sourceTree = "<group>"; };
-		042AA22B0F818643B011561B366BC805 /* URITemplate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URITemplate.swift; path = Sources/URITemplate.swift; sourceTree = "<group>"; };
-		0A57A2819C18B93065139A0184B1ACDE /* URITemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URITemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B0F8607D100147717A515FF61A58BC /* Mockingjay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mockingjay-umbrella.h"; sourceTree = "<group>"; };
+		04B1264E1BFE43C3B59D4741D9124A1A /* URITemplate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URITemplate.swift; path = Sources/URITemplate.swift; sourceTree = "<group>"; };
+		07A9A780CC346F91A27B3611A61F7576 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A57A2819C18B93065139A0184B1ACDE /* URITemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = URITemplate.framework; path = URITemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118EEB9828ECE3BF8312CF8B3D6F8867 /* Mockingjay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mockingjay-prefix.pch"; sourceTree = "<group>"; };
 		14C87F32BBF318D370593C84781859BB /* Pods-DeprecatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeprecatorTests-umbrella.h"; sourceTree = "<group>"; };
-		2F75DC0180FF786242F81989C59303F5 /* XCTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCTest.swift; path = Mockingjay/XCTest.swift; sourceTree = "<group>"; };
+		180CA8F2BAD4C462B1E03F1197FF3C28 /* Matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchers.swift; path = Mockingjay/Matchers.swift; sourceTree = "<group>"; };
+		190EBBB3A03BF087FFE9D8336F77384E /* Builders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Builders.swift; path = Mockingjay/Builders.swift; sourceTree = "<group>"; };
+		1B484A9C8F1C77990201A19A97D8D2FC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		21316074DDE203BF17C2DB9C10C34B8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D2AB842D2DC6ED23EB1A6E8E8A4A686 /* Mockingjay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mockingjay-dummy.m"; sourceTree = "<group>"; };
 		3E1AA64AC7A96112EE1FF7F2052835D1 /* Pods-DeprecatorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeprecatorTests-frameworks.sh"; sourceTree = "<group>"; };
-		43460DD227173A1501B696191C1FE788 /* NSURLSessionConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSURLSessionConfiguration.swift; path = Mockingjay/NSURLSessionConfiguration.swift; sourceTree = "<group>"; };
-		455B85B5E49E82783ED410F8A209C3C5 /* Pods-DeprecatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DeprecatorTests.modulemap"; sourceTree = "<group>"; };
-		466E8D9C1C05AE7E43C34590E7E3C360 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DA8FC313315CEA2EF417F8EA6668ACD /* Pods_DeprecatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeprecatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455B85B5E49E82783ED410F8A209C3C5 /* Pods-DeprecatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DeprecatorTests.modulemap"; sourceTree = "<group>"; };
+		4DA8FC313315CEA2EF417F8EA6668ACD /* Pods_DeprecatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeprecatorTests.framework; path = "Pods-DeprecatorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D3DBC691933A00ECB73AD663561868 /* Mockingjay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mockingjay.h; path = Mockingjay/Mockingjay.h; sourceTree = "<group>"; };
+		54360CDBA048B25288565A036911E1A9 /* URITemplate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "URITemplate-umbrella.h"; sourceTree = "<group>"; };
 		54CDDCFBEA035D3FC328219BC337BA01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5680D982D267DF3B2A1536E71F6B6BFB /* XCTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCTest.swift; path = Mockingjay/XCTest.swift; sourceTree = "<group>"; };
 		67C847C97E185A771F80FB00838B6272 /* Pods-DeprecatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeprecatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6C0DA7CFCD498D22607BE1D60EAF1C6E /* Mockingjay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mockingjay.h; path = Mockingjay/Mockingjay.h; sourceTree = "<group>"; };
-		71C734B5211887895E662189C1DDC6AF /* Mockingjay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mockingjay.swift; path = Mockingjay/Mockingjay.swift; sourceTree = "<group>"; };
+		7105459689E5A63F5AB60CEA452F59B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73E4F79849556C25CED115FE8F04F89A /* URITemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URITemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C61EB508B7E0ECB289802909CB73702 /* URITemplate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "URITemplate-prefix.pch"; sourceTree = "<group>"; };
-		7FCD8067ECA5FB532B7BD27BF6256842 /* URITemplate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = URITemplate.modulemap; sourceTree = "<group>"; };
+		7A20BCD9553D4B6C226CB6B2F03E305A /* Mockingjay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mockingjay.swift; path = Mockingjay/Mockingjay.swift; sourceTree = "<group>"; };
+		81C10F94A2239CC7D7AA19C256E62AD2 /* MockingjayProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockingjayProtocol.swift; path = Mockingjay/MockingjayProtocol.swift; sourceTree = "<group>"; };
+		8438486DFE2D0C79932D535F5D937F9B /* MockingjayURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MockingjayURLSessionConfiguration.m; path = Mockingjay/MockingjayURLSessionConfiguration.m; sourceTree = "<group>"; };
 		86CCA4371A5AADB8C4662BEED14AF1E9 /* Pods-DeprecatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeprecatorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A6DE00CCDAFF968AA7D1857F8AF9353 /* URITemplate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "URITemplate-umbrella.h"; sourceTree = "<group>"; };
-		8A919A7A62A3FD7EA78360971E9F42D5 /* Builders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Builders.swift; path = Mockingjay/Builders.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		875A155F7D119F337625A4175E26D2FD /* URITemplate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "URITemplate-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942D6A00A2503CD1CEE7E75FEA5758BD /* Pods-DeprecatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeprecatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		94BE6895EF7ACD387976129BFDDE1A6A /* URITemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URITemplate.h; path = Sources/URITemplate.h; sourceTree = "<group>"; };
-		95238BDE3E667246E679C9183B2C0FE3 /* MockingjayProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockingjayProtocol.swift; path = Mockingjay/MockingjayProtocol.swift; sourceTree = "<group>"; };
-		9F4DC5E1F96BF0CB8779ADD1FBF33FD0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9FCB43212BBF0DE95CA544E76B58E81B /* Mockingjay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mockingjay-prefix.pch"; sourceTree = "<group>"; };
+		A028B71AD543C4372D5933D8FB60FAED /* Mockingjay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mockingjay.xcconfig; sourceTree = "<group>"; };
 		B1F5596CBA9D614FDE6091102D1F08C0 /* Pods-DeprecatorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeprecatorTests-resources.sh"; sourceTree = "<group>"; };
-		BC64631EA72FEECB80204D8199776353 /* Mockingjay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mockingjay-umbrella.h"; sourceTree = "<group>"; };
-		C9F52F5CDB8DAC0914D39EA7D7144413 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFDF374F231EB65F4B6ADB616F7173B0 /* Mockingjay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Mockingjay.modulemap; sourceTree = "<group>"; };
-		D2C56AE3FA96B0397B5C671819E77EA6 /* Mockingjay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCCC9CA4961F92D0531D693CEA680A7B /* MockingjayURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MockingjayURLSessionConfiguration.m; path = Mockingjay/MockingjayURLSessionConfiguration.m; sourceTree = "<group>"; };
-		E1A4810E583E890297D6F2449E7DBC47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E8D477E3923D7B839A6C111BCA0974F9 /* Matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchers.swift; path = Mockingjay/Matchers.swift; sourceTree = "<group>"; };
-		EE180F3789B05D64FBF9DECDDD4A4A43 /* Mockingjay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mockingjay.xcconfig; sourceTree = "<group>"; };
+		C54CE93F3DC1A8C601B4AC9BF1E9F119 /* Mockingjay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Mockingjay.modulemap; sourceTree = "<group>"; };
+		CF4F7DA92E7ED718DFBAC5ACBC1BA082 /* URITemplate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = URITemplate.xcconfig; sourceTree = "<group>"; };
+		D2C56AE3FA96B0397B5C671819E77EA6 /* Mockingjay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Mockingjay.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44181826074B7B27B38A5B57D7C4CED /* URITemplate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = URITemplate.modulemap; sourceTree = "<group>"; };
+		F504CB693868E0C81FEE4B633D249843 /* URITemplate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "URITemplate-prefix.pch"; sourceTree = "<group>"; };
+		F881284F9F20DF10ADFBD0C37747ED5E /* NSURLSessionConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSURLSessionConfiguration.swift; path = Mockingjay/NSURLSessionConfiguration.swift; sourceTree = "<group>"; };
 		F9F1411EE4DB15B9C24397899E4144EB /* Pods-DeprecatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeprecatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		FA08456E982F68EAF2039035B05C07C4 /* URITemplate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "URITemplate-dummy.m"; sourceTree = "<group>"; };
 		FBC5348188678A64A9D3C17A73E75061 /* Pods-DeprecatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeprecatorTests-dummy.m"; sourceTree = "<group>"; };
-		FF7057368A64074C64C8BE06DB966A48 /* URITemplate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = URITemplate.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4553B945926873C6219658BE6C7BFBFF /* Frameworks */ = {
+		6AA23E09A3A0A6880337D5CE0B98B8AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15AC3950ECBA88277E7BC3545F6D65B0 /* Foundation.framework in Frameworks */,
+				7B23A0EC59F70B42FA0DC9885CEA2F21 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7401B70994AAB8931A7CC620C178E394 /* Frameworks */ = {
+		96C3909747E8F888CBAF210A6B9F7073 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2DFF196C57BB58DFBAB61C301931BD /* Foundation.framework in Frameworks */,
-				CF5F7EE8BCEFDD735EF8B5F744731345 /* URITemplate.framework in Frameworks */,
-				1BDB08A3CFDC7BAAD15BA6D0E2553A4C /* XCTest.framework in Frameworks */,
+				340E892E4635BFF3C198D356C4AC854C /* Foundation.framework in Frameworks */,
+				A1136007D0AE6FA6A4880E97642D1E49 /* URITemplate.framework in Frameworks */,
+				51A81325D6F4A1CB9F7550705CB5E384 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA1FF7232F6B7636B53CA4C8A084C686 /* Frameworks */ = {
+		C8E507DBC18CAE3994BAC2B944F26ED7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA5111B9B71BAAEFD52B331F7A3C05E /* Foundation.framework in Frameworks */,
+				0EFEDEF1A7A04A85F70C1884E4C140B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		119A69382549F8C458FA9A0F4E0F6D7C /* Pods */ = {
+		1B7F645A83DCB991AD324A185569A139 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E24C16765E61C6514DB0D858C3EF8BAD /* Mockingjay */,
-				D6B61C613A1EE1510F89E133DE057E2A /* URITemplate */,
+				190EBBB3A03BF087FFE9D8336F77384E /* Builders.swift */,
+				180CA8F2BAD4C462B1E03F1197FF3C28 /* Matchers.swift */,
+				50D3DBC691933A00ECB73AD663561868 /* Mockingjay.h */,
+				7A20BCD9553D4B6C226CB6B2F03E305A /* Mockingjay.swift */,
+				81C10F94A2239CC7D7AA19C256E62AD2 /* MockingjayProtocol.swift */,
+				8438486DFE2D0C79932D535F5D937F9B /* MockingjayURLSessionConfiguration.m */,
+				F881284F9F20DF10ADFBD0C37747ED5E /* NSURLSessionConfiguration.swift */,
 			);
-			name = Pods;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		26FFD8901157986FE8EC9C85D0C97E9A /* Support Files */ = {
+		429965D646EADD28548257A3E89113F1 /* URITemplate */ = {
 			isa = PBXGroup;
 			children = (
-				466E8D9C1C05AE7E43C34590E7E3C360 /* Info.plist */,
-				7FCD8067ECA5FB532B7BD27BF6256842 /* URITemplate.modulemap */,
-				FF7057368A64074C64C8BE06DB966A48 /* URITemplate.xcconfig */,
-				FA08456E982F68EAF2039035B05C07C4 /* URITemplate-dummy.m */,
-				7C61EB508B7E0ECB289802909CB73702 /* URITemplate-prefix.pch */,
-				8A6DE00CCDAFF968AA7D1857F8AF9353 /* URITemplate-umbrella.h */,
+				04B1264E1BFE43C3B59D4741D9124A1A /* URITemplate.swift */,
+				AABF456C8AAB501D4785A9832F18EAA5 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/URITemplate";
+			name = URITemplate;
+			path = URITemplate;
 			sourceTree = "<group>";
 		};
-		5F5232CF90918F2B67E86C41C76F53B8 /* Support Files */ = {
+		508B65C0D807851235B8DA9EB5348B83 /* Mockingjay */ = {
 			isa = PBXGroup;
 			children = (
-				C9F52F5CDB8DAC0914D39EA7D7144413 /* Info.plist */,
-				CFDF374F231EB65F4B6ADB616F7173B0 /* Mockingjay.modulemap */,
-				EE180F3789B05D64FBF9DECDDD4A4A43 /* Mockingjay.xcconfig */,
-				003A51EB46E0998B045EC4FFC72E6D39 /* Mockingjay-dummy.m */,
-				9FCB43212BBF0DE95CA544E76B58E81B /* Mockingjay-prefix.pch */,
-				BC64631EA72FEECB80204D8199776353 /* Mockingjay-umbrella.h */,
+				1B7F645A83DCB991AD324A185569A139 /* Core */,
+				E6AAC18F3C39F2CBB6247754A1ACB4B6 /* Support Files */,
+				AF72BC1EB8F035C26BA08595469B7BE2 /* XCTest */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Mockingjay";
+			name = Mockingjay;
+			path = Mockingjay;
+			sourceTree = "<group>";
+		};
+		5A08B713FD98D5A5D4A4A1A0890007D9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7105459689E5A63F5AB60CEA452F59B9 /* Foundation.framework */,
+				1B484A9C8F1C77990201A19A97D8D2FC /* XCTest.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -168,10 +173,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				B9D96DDB2A580195276DEA4CCB386A35 /* Frameworks */,
-				119A69382549F8C458FA9A0F4E0F6D7C /* Pods */,
+				835EF60F8B7CF9DB86BE5B55CDE80DB2 /* Pods */,
 				D988F15FDBFAF7627242DB45BD8D948C /* Products */,
 				86EBC5A6456A0E5EC11D29DF9D8A205D /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		835EF60F8B7CF9DB86BE5B55CDE80DB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				508B65C0D807851235B8DA9EB5348B83 /* Mockingjay */,
+				429965D646EADD28548257A3E89113F1 /* URITemplate */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		86EBC5A6456A0E5EC11D29DF9D8A205D /* Targets Support Files */ = {
@@ -200,32 +214,35 @@
 			path = "Target Support Files/Pods-DeprecatorTests";
 			sourceTree = "<group>";
 		};
-		A388B0E91B352AFC75FDAA792522AB04 /* iOS */ = {
+		AABF456C8AAB501D4785A9832F18EAA5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1A4810E583E890297D6F2449E7DBC47 /* Foundation.framework */,
-				9F4DC5E1F96BF0CB8779ADD1FBF33FD0 /* XCTest.framework */,
+				07A9A780CC346F91A27B3611A61F7576 /* Info.plist */,
+				D44181826074B7B27B38A5B57D7C4CED /* URITemplate.modulemap */,
+				CF4F7DA92E7ED718DFBAC5ACBC1BA082 /* URITemplate.xcconfig */,
+				875A155F7D119F337625A4175E26D2FD /* URITemplate-dummy.m */,
+				F504CB693868E0C81FEE4B633D249843 /* URITemplate-prefix.pch */,
+				54360CDBA048B25288565A036911E1A9 /* URITemplate-umbrella.h */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/URITemplate";
+			sourceTree = "<group>";
+		};
+		AF72BC1EB8F035C26BA08595469B7BE2 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				5680D982D267DF3B2A1536E71F6B6BFB /* XCTest.swift */,
+			);
+			name = XCTest;
 			sourceTree = "<group>";
 		};
 		B9D96DDB2A580195276DEA4CCB386A35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				73E4F79849556C25CED115FE8F04F89A /* URITemplate.framework */,
-				A388B0E91B352AFC75FDAA792522AB04 /* iOS */,
+				5A08B713FD98D5A5D4A4A1A0890007D9 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D6B61C613A1EE1510F89E133DE057E2A /* URITemplate */ = {
-			isa = PBXGroup;
-			children = (
-				94BE6895EF7ACD387976129BFDDE1A6A /* URITemplate.h */,
-				042AA22B0F818643B011561B366BC805 /* URITemplate.swift */,
-				26FFD8901157986FE8EC9C85D0C97E9A /* Support Files */,
-			);
-			path = URITemplate;
 			sourceTree = "<group>";
 		};
 		D988F15FDBFAF7627242DB45BD8D948C /* Products */ = {
@@ -238,77 +255,95 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFB75708158A655195CC45500AE0A10F /* XCTest */ = {
+		E6AAC18F3C39F2CBB6247754A1ACB4B6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F75DC0180FF786242F81989C59303F5 /* XCTest.swift */,
+				21316074DDE203BF17C2DB9C10C34B8F /* Info.plist */,
+				C54CE93F3DC1A8C601B4AC9BF1E9F119 /* Mockingjay.modulemap */,
+				A028B71AD543C4372D5933D8FB60FAED /* Mockingjay.xcconfig */,
+				3D2AB842D2DC6ED23EB1A6E8E8A4A686 /* Mockingjay-dummy.m */,
+				118EEB9828ECE3BF8312CF8B3D6F8867 /* Mockingjay-prefix.pch */,
+				01B0F8607D100147717A515FF61A58BC /* Mockingjay-umbrella.h */,
 			);
-			name = XCTest;
-			sourceTree = "<group>";
-		};
-		E24C16765E61C6514DB0D858C3EF8BAD /* Mockingjay */ = {
-			isa = PBXGroup;
-			children = (
-				EB190D84F8106F267E63631E5FC1967E /* Core */,
-				5F5232CF90918F2B67E86C41C76F53B8 /* Support Files */,
-				DFB75708158A655195CC45500AE0A10F /* XCTest */,
-			);
-			path = Mockingjay;
-			sourceTree = "<group>";
-		};
-		EB190D84F8106F267E63631E5FC1967E /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8A919A7A62A3FD7EA78360971E9F42D5 /* Builders.swift */,
-				E8D477E3923D7B839A6C111BCA0974F9 /* Matchers.swift */,
-				6C0DA7CFCD498D22607BE1D60EAF1C6E /* Mockingjay.h */,
-				71C734B5211887895E662189C1DDC6AF /* Mockingjay.swift */,
-				95238BDE3E667246E679C9183B2C0FE3 /* MockingjayProtocol.swift */,
-				DCCC9CA4961F92D0531D693CEA680A7B /* MockingjayURLSessionConfiguration.m */,
-				43460DD227173A1501B696191C1FE788 /* NSURLSessionConfiguration.swift */,
-			);
-			name = Core;
+			name = "Support Files";
+			path = "../Target Support Files/Mockingjay";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		067072FECA170999356C3DBE53C6806C /* Headers */ = {
+		6E6EDE079D69649DD4E850E5D8E48EDD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7112BA53693B63EAC5FF0C4DC6EB3862 /* URITemplate-umbrella.h in Headers */,
-				725E9857C7BBC381198E4210A082E77B /* URITemplate.h in Headers */,
+				A772772A87F6C0A6F0784A6288A80339 /* Mockingjay-umbrella.h in Headers */,
+				E141F8C5C74F5EE4F7E703D5C0E812BC /* Mockingjay.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07EFDF2D078C0E48A62644030E98947A /* Headers */ = {
+		79EEEAC562F4508EFD70C2A5A27F5845 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A8540A2A9F2A4882B0F544C990D91E /* Mockingjay-umbrella.h in Headers */,
-				779B719FB658D85BAB9460E9A5674B76 /* Mockingjay.h in Headers */,
+				69627B1284EB3494300C000F0C03823E /* URITemplate-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67F9E5E4CA09418F79E088EEA63C4AF9 /* Headers */ = {
+		F57307314D22DE335FBE19AEFA81BEA0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FEE7CC4D7D012A95A7E8908ADF60E1 /* Pods-DeprecatorTests-umbrella.h in Headers */,
+				4803B65FCC48EAE5D2074AAE5C256500 /* Pods-DeprecatorTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7DB2A7BABD37B67AF7A062F2EB7344AA /* URITemplate */ = {
+		0BDAFD6BFBED189FB4B2B7F8B9364C81 /* Pods-DeprecatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31F6B788A9186E9E610625627939CB47 /* Build configuration list for PBXNativeTarget "URITemplate" */;
+			buildConfigurationList = 26EE807D9F069BAF02F224282CBF2D36 /* Build configuration list for PBXNativeTarget "Pods-DeprecatorTests" */;
 			buildPhases = (
-				AB7F62E0ABCDC6EC42F9DBF2DA0AE4C0 /* Sources */,
-				4553B945926873C6219658BE6C7BFBFF /* Frameworks */,
-				067072FECA170999356C3DBE53C6806C /* Headers */,
+				FF4D5D0BBEAC1775FDCE441AA2B904CF /* Sources */,
+				6AA23E09A3A0A6880337D5CE0B98B8AA /* Frameworks */,
+				F57307314D22DE335FBE19AEFA81BEA0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0626198699819DD079E59206B2AE299F /* PBXTargetDependency */,
+				4F21F65D1E418FCA49F6F6A58A4FAFDA /* PBXTargetDependency */,
+			);
+			name = "Pods-DeprecatorTests";
+			productName = "Pods-DeprecatorTests";
+			productReference = 4DA8FC313315CEA2EF417F8EA6668ACD /* Pods_DeprecatorTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5BAACC736A5215103E10E2DC0A74FDCD /* Mockingjay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16964F8FBB08BEB4B7115105EAFE5724 /* Build configuration list for PBXNativeTarget "Mockingjay" */;
+			buildPhases = (
+				446061CD15E0AD4959447EFA94A2A717 /* Sources */,
+				96C3909747E8F888CBAF210A6B9F7073 /* Frameworks */,
+				6E6EDE079D69649DD4E850E5D8E48EDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839503359D65F5788C9EBE47FB7F0589 /* PBXTargetDependency */,
+			);
+			name = Mockingjay;
+			productName = Mockingjay;
+			productReference = D2C56AE3FA96B0397B5C671819E77EA6 /* Mockingjay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5BAEE407D509A3F67350A21DD9179E25 /* URITemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA68A49A2A8E077759AAE99867F0AEC /* Build configuration list for PBXNativeTarget "URITemplate" */;
+			buildPhases = (
+				4C0A4BC3929258EF856D25752BD61151 /* Sources */,
+				C8E507DBC18CAE3994BAC2B944F26ED7 /* Frameworks */,
+				79EEEAC562F4508EFD70C2A5A27F5845 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -317,43 +352,6 @@
 			name = URITemplate;
 			productName = URITemplate;
 			productReference = 0A57A2819C18B93065139A0184B1ACDE /* URITemplate.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AD2AA9F34220D3A92C93381E7C7D24F1 /* Pods-DeprecatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A75808BE1D51B4890E08B1AD6EDD8DDA /* Build configuration list for PBXNativeTarget "Pods-DeprecatorTests" */;
-			buildPhases = (
-				10DC0234CED50273DE4B2A2AACFA2C89 /* Sources */,
-				AA1FF7232F6B7636B53CA4C8A084C686 /* Frameworks */,
-				67F9E5E4CA09418F79E088EEA63C4AF9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C2433D2F51007D004B3A00113FC9A0CB /* PBXTargetDependency */,
-				8C344C2724A98F12073CD5A7C0A81146 /* PBXTargetDependency */,
-			);
-			name = "Pods-DeprecatorTests";
-			productName = "Pods-DeprecatorTests";
-			productReference = 4DA8FC313315CEA2EF417F8EA6668ACD /* Pods_DeprecatorTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E31B3D9B406E3BDB5B76F5E88E778F39 /* Mockingjay */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3788BEC810CBB1B87561C955F976F7DD /* Build configuration list for PBXNativeTarget "Mockingjay" */;
-			buildPhases = (
-				85477F46D8D3ADA6ADBB3B2514B7DAC1 /* Sources */,
-				7401B70994AAB8931A7CC620C178E394 /* Frameworks */,
-				07EFDF2D078C0E48A62644030E98947A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD6566A27F1E70FC26F784A68356ADCA /* PBXTargetDependency */,
-			);
-			name = Mockingjay;
-			productName = Mockingjay;
-			productReference = D2C56AE3FA96B0397B5C671819E77EA6 /* Mockingjay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -377,71 +375,71 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E31B3D9B406E3BDB5B76F5E88E778F39 /* Mockingjay */,
-				AD2AA9F34220D3A92C93381E7C7D24F1 /* Pods-DeprecatorTests */,
-				7DB2A7BABD37B67AF7A062F2EB7344AA /* URITemplate */,
+				5BAACC736A5215103E10E2DC0A74FDCD /* Mockingjay */,
+				0BDAFD6BFBED189FB4B2B7F8B9364C81 /* Pods-DeprecatorTests */,
+				5BAEE407D509A3F67350A21DD9179E25 /* URITemplate */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		10DC0234CED50273DE4B2A2AACFA2C89 /* Sources */ = {
+		446061CD15E0AD4959447EFA94A2A717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1650D9BD0C57CD0557D041D5BD9B13DB /* Pods-DeprecatorTests-dummy.m in Sources */,
+				FF6F0F9C921A0E83B121AA9DCE9B2C2E /* Builders.swift in Sources */,
+				C9C68C36E37E329E102FD6FB1D4DEB11 /* Matchers.swift in Sources */,
+				0FC2ED3AAB8A130CF1BE1B7663732271 /* Mockingjay-dummy.m in Sources */,
+				D933E04ADE77BD7D1D60FF310E21CF96 /* Mockingjay.swift in Sources */,
+				C5B8A87F3C625A850B29F5324A5FDFB3 /* MockingjayProtocol.swift in Sources */,
+				47AC330AA7F81E96C72BADE17A77EEA4 /* MockingjayURLSessionConfiguration.m in Sources */,
+				B5C6D6A05183B48CFD66AC7DB62C01E0 /* NSURLSessionConfiguration.swift in Sources */,
+				A37941A8CB691DD6810DBF122FBC6AFC /* XCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85477F46D8D3ADA6ADBB3B2514B7DAC1 /* Sources */ = {
+		4C0A4BC3929258EF856D25752BD61151 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3574C3B265948B3430E52E29B59BFCA8 /* Builders.swift in Sources */,
-				14DCA4093841D345C0D2CF8E02518CD6 /* Matchers.swift in Sources */,
-				181D893AA6D8060666F173ADAB984C65 /* Mockingjay-dummy.m in Sources */,
-				9D032DBF13C563DB910B9A611E63C84E /* Mockingjay.swift in Sources */,
-				53A161A7DD7B757D06DA6D97AA12D2CB /* MockingjayProtocol.swift in Sources */,
-				509FB987182D4E7E5F55F7EC1DC7F385 /* MockingjayURLSessionConfiguration.m in Sources */,
-				C7D48E77755D6A8DF8FB0CF52CA5D103 /* NSURLSessionConfiguration.swift in Sources */,
-				2BCEC32E268B4859FA853275A7BC740C /* XCTest.swift in Sources */,
+				9869167E9D1988EF5CC81A18DFDB34D9 /* URITemplate-dummy.m in Sources */,
+				56E33CA48F7DC412F5B86903E4F8A2CE /* URITemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB7F62E0ABCDC6EC42F9DBF2DA0AE4C0 /* Sources */ = {
+		FF4D5D0BBEAC1775FDCE441AA2B904CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9EC8D62D2BFF5F6397C8CC88FDA49C /* URITemplate-dummy.m in Sources */,
-				2467186C5AB5BDADAC427E838E308BB5 /* URITemplate.swift in Sources */,
+				6E403FCCDF1CCD66C52D9D9CDCE59E2B /* Pods-DeprecatorTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8C344C2724A98F12073CD5A7C0A81146 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = URITemplate;
-			target = 7DB2A7BABD37B67AF7A062F2EB7344AA /* URITemplate */;
-			targetProxy = B7B1F92F7E99536ED11599DCDD364FAB /* PBXContainerItemProxy */;
-		};
-		C2433D2F51007D004B3A00113FC9A0CB /* PBXTargetDependency */ = {
+		0626198699819DD079E59206B2AE299F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mockingjay;
-			target = E31B3D9B406E3BDB5B76F5E88E778F39 /* Mockingjay */;
-			targetProxy = D1A79DA46DDBA70DEA52FDC685DCE806 /* PBXContainerItemProxy */;
+			target = 5BAACC736A5215103E10E2DC0A74FDCD /* Mockingjay */;
+			targetProxy = 02627CFCE2210FAE6A0CDA9960B8AF0B /* PBXContainerItemProxy */;
 		};
-		CD6566A27F1E70FC26F784A68356ADCA /* PBXTargetDependency */ = {
+		4F21F65D1E418FCA49F6F6A58A4FAFDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = URITemplate;
-			target = 7DB2A7BABD37B67AF7A062F2EB7344AA /* URITemplate */;
-			targetProxy = 415D56258760259BC516F747B8055DBC /* PBXContainerItemProxy */;
+			target = 5BAEE407D509A3F67350A21DD9179E25 /* URITemplate */;
+			targetProxy = 9E61E595C13C1AC308CC3B84ECE1D255 /* PBXContainerItemProxy */;
+		};
+		839503359D65F5788C9EBE47FB7F0589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = URITemplate;
+			target = 5BAEE407D509A3F67350A21DD9179E25 /* URITemplate */;
+			targetProxy = 37BFFDAAA0C4330B0981D7AB5E102997 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -459,6 +457,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -476,20 +475,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		04B5F4646EB5AB29E8582305E1578F1A /* Debug */ = {
+		2119558BE0E060B5AC2984228F0BB8D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86CCA4371A5AADB8C4662BEED14AF1E9 /* Pods-DeprecatorTests.debug.xcconfig */;
+			baseConfigurationReference = F9F1411EE4DB15B9C24397899E4144EB /* Pods-DeprecatorTests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -498,11 +500,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-DeprecatorTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DeprecatorTests/Pods-DeprecatorTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -510,18 +512,19 @@
 				PRODUCT_NAME = Pods_DeprecatorTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		64B5C763C1DF91C3EB1345B577D401CB /* Release */ = {
+		64A87D7616DA5577AC1DD3FA617B5D21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF7057368A64074C64C8BE06DB966A48 /* URITemplate.xcconfig */;
+			baseConfigurationReference = CF4F7DA92E7ED718DFBAC5ACBC1BA082 /* URITemplate.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -540,17 +543,20 @@
 				PRODUCT_NAME = URITemplate;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		77B6C95AF5266C8E9844344475C7AE7B /* Debug */ = {
+		7BDCA35BCC3C066FBB785C6091C094A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF7057368A64074C64C8BE06DB966A48 /* URITemplate.xcconfig */;
+			baseConfigurationReference = 86CCA4371A5AADB8C4662BEED14AF1E9 /* Pods-DeprecatorTests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -559,14 +565,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/URITemplate/URITemplate-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/URITemplate/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-DeprecatorTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/URITemplate/URITemplate.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DeprecatorTests/Pods-DeprecatorTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = URITemplate;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DeprecatorTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -576,11 +586,46 @@
 			};
 			name = Debug;
 		};
-		86F3E8D4BA7CEE019CCEA20B8C1F6348 /* Release */ = {
+		7C9DA91A4824F79E911E273F4E7072A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE180F3789B05D64FBF9DECDDD4A4A43 /* Mockingjay.xcconfig */;
+			baseConfigurationReference = A028B71AD543C4372D5933D8FB60FAED /* Mockingjay.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Mockingjay/Mockingjay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mockingjay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mockingjay/Mockingjay.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Mockingjay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A29620D6BD10CA675FB986D113DAD152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A028B71AD543C4372D5933D8FB60FAED /* Mockingjay.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -599,46 +644,47 @@
 				PRODUCT_NAME = Mockingjay;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		9C79A64D0AC78CE1B8463EF749EE7828 /* Release */ = {
+		C2722ADBF558138F2F3E443CC8F38400 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9F1411EE4DB15B9C24397899E4144EB /* Pods-DeprecatorTests.release.xcconfig */;
+			baseConfigurationReference = CF4F7DA92E7ED718DFBAC5ACBC1BA082 /* URITemplate.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DeprecatorTests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/URITemplate/URITemplate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/URITemplate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DeprecatorTests/Pods-DeprecatorTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DeprecatorTests;
+				MODULEMAP_FILE = "Target Support Files/URITemplate/URITemplate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = URITemplate;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -656,6 +702,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -669,78 +716,49 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		FE4C478C775760D02636CAB7FB00F4D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE180F3789B05D64FBF9DECDDD4A4A43 /* Mockingjay.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Mockingjay/Mockingjay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mockingjay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mockingjay/Mockingjay.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Mockingjay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16964F8FBB08BEB4B7115105EAFE5724 /* Build configuration list for PBXNativeTarget "Mockingjay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C9DA91A4824F79E911E273F4E7072A3 /* Debug */,
+				A29620D6BD10CA675FB986D113DAD152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26EE807D9F069BAF02F224282CBF2D36 /* Build configuration list for PBXNativeTarget "Pods-DeprecatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BDCA35BCC3C066FBB785C6091C094A1 /* Debug */,
+				2119558BE0E060B5AC2984228F0BB8D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				034014829C1E4434983CF3A690C12017 /* Debug */,
-				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31F6B788A9186E9E610625627939CB47 /* Build configuration list for PBXNativeTarget "URITemplate" */ = {
+		DCA68A49A2A8E077759AAE99867F0AEC /* Build configuration list for PBXNativeTarget "URITemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77B6C95AF5266C8E9844344475C7AE7B /* Debug */,
-				64B5C763C1DF91C3EB1345B577D401CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3788BEC810CBB1B87561C955F976F7DD /* Build configuration list for PBXNativeTarget "Mockingjay" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE4C478C775760D02636CAB7FB00F4D1 /* Debug */,
-				86F3E8D4BA7CEE019CCEA20B8C1F6348 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A75808BE1D51B4890E08B1AD6EDD8DDA /* Build configuration list for PBXNativeTarget "Pods-DeprecatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04B5F4646EB5AB29E8582305E1578F1A /* Debug */,
-				9C79A64D0AC78CE1B8463EF749EE7828 /* Release */,
+				C2722ADBF558138F2F3E443CC8F38400 /* Debug */,
+				64A87D7616DA5577AC1DD3FA617B5D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,7 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#endif
 
-#import "URITemplate.h"
 
 FOUNDATION_EXPORT double URITemplateVersionNumber;
 FOUNDATION_EXPORT const unsigned char URITemplateVersionString[];
