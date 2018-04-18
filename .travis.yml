@@ -1,7 +1,0 @@
-language: objective-c
-osx_image: xcode9.3
-xcode_project: Deprecator.xcodeproj
-xcode_scheme: Deprecator
-
-script:
-  - xctool -project Deprecator.xcodeproj -scheme Deprecator -sdk iphonesimulator11.3 run-tests

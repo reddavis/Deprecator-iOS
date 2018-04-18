@@ -1,6 +1,6 @@
 # Deprecator
 
-[![Build Status](https://travis-ci.org/reddavis/Deprecator-iOS.svg?branch=master)](https://travis-ci.org/reddavis/Deprecator-iOS)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5ad768595918c10001e582cd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5ad768595918c10001e582cd/build/latest?branch=master)
 
 **Deprecation handler for iOS**
 
