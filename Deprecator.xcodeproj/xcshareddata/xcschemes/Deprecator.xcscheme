@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4D31E8E1D2A937C008FE1D7"
+               BlueprintIdentifier = "A4FB690F2086718200E31339"
                BuildableName = "Deprecator.framework"
                BlueprintName = "Deprecator"
                ReferencedContainer = "container:Deprecator.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4D31E981D2A937C008FE1D7"
+               BlueprintIdentifier = "A4FB69182086718200E31339"
                BuildableName = "DeprecatorTests.xctest"
                BlueprintName = "DeprecatorTests"
                ReferencedContainer = "container:Deprecator.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A4D31E8E1D2A937C008FE1D7"
+            BlueprintIdentifier = "A4FB690F2086718200E31339"
             BuildableName = "Deprecator.framework"
             BlueprintName = "Deprecator"
             ReferencedContainer = "container:Deprecator.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A4D31E8E1D2A937C008FE1D7"
+            BlueprintIdentifier = "A4FB690F2086718200E31339"
             BuildableName = "Deprecator.framework"
             BlueprintName = "Deprecator"
             ReferencedContainer = "container:Deprecator.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A4D31E8E1D2A937C008FE1D7"
+            BlueprintIdentifier = "A4FB690F2086718200E31339"
             BuildableName = "Deprecator.framework"
             BlueprintName = "Deprecator"
             ReferencedContainer = "container:Deprecator.xcodeproj">

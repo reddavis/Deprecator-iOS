@@ -1,63 +1,3 @@
-# Deprecator
-
-[![Build Status](https://travis-ci.org/reddavis/Deprecator-iOS.svg?branch=master)](https://travis-ci.org/reddavis/Deprecator-iOS)
-
-**Deprecation handler for iOS**
-
-Deprecator automatically handles version checking against a hosted JSON file and handles soft and hard deprecation of old release builds of your app.
-
-* Hard/Soft deprecation
-* Built-in UI
-* Internationalisation
-* Informative errors
-
-## Install
-
-```
-github "reddavis/Deprecator-iOS"
-```
-
-## Example
-
-Let’s initialize the Deprecator:
-
-```
-self.deprecator = Deprecator(deprecationURL: url, currentBuildNumber: 47)
-self.deprecator.delegate = self
-```
-
-and a few data source and delegate methods:
-
-```
-// MARK: DeprecatorDelegate
-
-func didFind(deprecation: Deprecator.Deprecation, isRequired: Bool, in deprecator: Deprecator)
-{
-    deprecation.present(in: self.rootViewController, language: "fr")
-}
-
-func didFail(with error: Deprecator.DataError, in deprecator: Deprecator)
-{
-    //…
-}
-
-func didNotFindDeprecation(in deprecator: Deprecator)
-{
-    //…
-}
-```
-
-To trigger a check for deprecations:
-
-```
-self.deprecator.checkForDeprecations()
-```
-
-## Deprecator JSON
-
-The JSON file should look like
-
-```
 {
     "meta": {
         "version": 1
@@ -105,9 +45,3 @@ The JSON file should look like
         }
     }
 }
-
-```
-
-## License
-
-[MIT License](http://www.opensource.org/licenses/MIT).
