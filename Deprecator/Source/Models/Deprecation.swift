@@ -40,7 +40,8 @@ public struct Deprecation: Decodable
     
     // MARK: Alerts
     
-    public func present(in viewController: UIViewController, language: String? = nil, completion: (() -> Void)? = nil)
+    public func present(in viewController: UIViewController, language: String? = nil, completion: (() -> Void)? = nil,
+                        didDismiss: ((_ success: Bool) -> Void)? = nil)
     {
         var languageStrings = self.defaultLanguageStrings
         if let unwrappedLanguage = language,
@@ -55,13 +56,16 @@ public struct Deprecation: Decodable
         // Update action
         let updateAction = UIAlertAction(title: languageStrings.updateTitle, style: .default) { (action) in
             UIApplication.shared.open(self.appStoreURL, options: [:], completionHandler: nil)
+            didDismiss?(true)
         }
         alertController.addAction(updateAction)
         
         // Cancel button
         if let cancelTitle = languageStrings.cancelTitle
         {
-            let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
+            let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel) { (action) in
+                didDismiss?(false)
+            }
             alertController.addAction(cancelAction)
         }
         
