@@ -66,7 +66,9 @@ public struct Deprecation: Decodable
         }
         
         // Present
-        viewController.present(alertController, animated: true, completion: completion)
+        DispatchQueue.main.async {
+            viewController.present(alertController, animated: true, completion: completion)
+        }
     }
 }
 
