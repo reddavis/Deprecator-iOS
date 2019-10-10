@@ -77,6 +77,8 @@ public final class Deprecator
                 let decoder = JSONDecoder()
                 let deprecations = try decoder.decode(Deprecations.self, from: unwrappedData)
 
+                // First check that there is a minimum deprecation.
+                // If there is one, then it takes priority.
                 if let minimumDeprecation = deprecations.minimumDeprecation,
                        minimumDeprecation.buildNumber > weakSelf.currentBuildNumber
                 {
@@ -84,8 +86,8 @@ public final class Deprecator
                     return
                 }
                 
-                // First check that there is a preferred deprecation.
-                // If there is one and a minumum deprecation then it takes priority
+                // Check if there is a preferred deprecation.
+                // This will only be called if there is no minimum deprecation.
                 if let preferredDeprecation = deprecations.preferredDeprecation,
                        preferredDeprecation.buildNumber > weakSelf.currentBuildNumber
                 {

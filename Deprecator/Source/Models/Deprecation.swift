@@ -40,7 +40,7 @@ public struct Deprecation: Decodable
     
     // MARK: Alerts
     
-    public func present(in viewController: UIViewController, language: String? = nil)
+    public func present(in viewController: UIViewController, language: String? = nil, completion: (() -> Void)? = nil)
     {
         var languageStrings = self.defaultLanguageStrings
         if let unwrappedLanguage = language,
@@ -67,7 +67,7 @@ public struct Deprecation: Decodable
         
         // Present
         DispatchQueue.main.async {
-            viewController.present(alertController, animated: true, completion: nil)
+            viewController.present(alertController, animated: true, completion: completion)
         }
     }
 }
