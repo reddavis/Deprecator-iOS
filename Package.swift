@@ -4,23 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "Damson",
+    name: "Deprecator",
     platforms: [
         .iOS(.v12)
     ],
     products: [
         .library(
-            name: "Damson",
-            targets: ["Damson"]),
+            name: "Deprecator",
+            targets: ["Deprecator"]),
     ],
     targets: [
         .target(
-            name: "Damson",
+            name: "Deprecator",
             dependencies: [],
-            path: "Damson"),
+            path: "Deprecator"),
         .testTarget(
-            name: "DamsonTests",
-            dependencies: ["Damson"],
-            path: "DamsonTests"),
+            name: "DeprecatorTests",
+            dependencies: ["Deprecator"],
+            path: "DeprecatorTests"),
     ]
 )
