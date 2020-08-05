@@ -22,12 +22,26 @@ public extension Deprecator
         public let currentBuild: Int
         
         /// Handler for when a deprecation is found.
-        public let onDeprecationFound: (_ deprecation: Deprecator.Deprecation) -> Void
+        public let onDeprecationFound: DeprecationFoundClosure
+        public typealias DeprecationFoundClosure = (_ deprecation: Deprecator.Deprecation) -> Void
         
         /// Handler for when no deprecation is found.
-        public let onNoDeprecationFound: () -> Void
+        public let onNoDeprecationFound: NoDeprecationFoundClosure
+        public typealias NoDeprecationFoundClosure = () -> Void
         
         /// Handler for when `Deprecator` encounters an error.
-        public let onError: (_ error: Deprecator.APIError) -> Void
+        public let onError: ErrorClosure
+        public typealias ErrorClosure = (_ error: Deprecator.APIError) -> Void
+        
+        // MARK: Initialization
+        
+        public init(url: URL, currentBuild: Int, onDeprecationFound: @escaping DeprecationFoundClosure, onNoDeprecationFound: @escaping NoDeprecationFoundClosure, onError: @escaping ErrorClosure)
+        {
+            self.url = url
+            self.currentBuild = currentBuild
+            self.onDeprecationFound = onDeprecationFound
+            self.onNoDeprecationFound = onNoDeprecationFound
+            self.onError = onError
+        }
     }
 }
