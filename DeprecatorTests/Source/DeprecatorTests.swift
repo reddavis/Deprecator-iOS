@@ -35,8 +35,9 @@ internal final class DeprecatorTests: XCTestCase
         // Deprecator
         let handlerExpectation = self.expectation(description: "onDeprecationFound called")
         
-        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 39, onDeprecationFound: { (deprecation) in
+        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 39, onDeprecationFound: { (deprecation, isRequired) in
             XCTAssertEqual(deprecation.build, 40)
+            XCTAssertTrue(isRequired)
             XCTAssertEqual(deprecation.updateURL, URL(string: "https://apply.workable.com/withplum/"))
             
             handlerExpectation.fulfill()
@@ -64,8 +65,9 @@ internal final class DeprecatorTests: XCTestCase
         // Deprecator
         let handlerExpectation = self.expectation(description: "onDeprecationFound called")
         
-        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 59, onDeprecationFound: { (deprecation) in
+        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 59, onDeprecationFound: { (deprecation, isRequired) in
             XCTAssertEqual(deprecation.build, 60)
+            XCTAssertFalse(isRequired)
             XCTAssertEqual(deprecation.updateURL, URL(string: "https://apply.workable.com/withplum/"))
             
             handlerExpectation.fulfill()
@@ -93,7 +95,7 @@ internal final class DeprecatorTests: XCTestCase
         // Deprecator
         let handlerExpectation = self.expectation(description: "onDeprecationFound called")
         
-        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 100, onDeprecationFound: { (deprecation) in
+        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 100, onDeprecationFound: { (_, _) in
             XCTFail("No deprecation should have been found")
         }, onNoDeprecationFound: {
             handlerExpectation.fulfill()
@@ -118,7 +120,7 @@ internal final class DeprecatorTests: XCTestCase
         // Deprecator
         let handlerExpectation = self.expectation(description: "onDeprecationFound called")
         
-        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 100, onDeprecationFound: { (deprecation) in
+        let configuration = Deprecator.Configuration(url: self.url, currentBuild: 100, onDeprecationFound: { (_, _) in
             XCTFail("No deprecation should have been found")
         }, onNoDeprecationFound: {
             XCTFail("Should have been called")

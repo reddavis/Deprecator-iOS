@@ -63,7 +63,7 @@ public final class Deprecator
                     minimum.build > self.configuration.currentBuild
                 {
                     currentDeprecation = minimum
-                    self.configuration.onDeprecationFound(minimum)
+                    self.configuration.onDeprecationFound(minimum, true)
                     return
                 }
                 
@@ -72,7 +72,7 @@ public final class Deprecator
                        preferred.build > self.configuration.currentBuild
                 {
                     currentDeprecation = preferred
-                    self.configuration.onDeprecationFound(preferred)
+                    self.configuration.onDeprecationFound(preferred, false)
                     return
                 }
                 

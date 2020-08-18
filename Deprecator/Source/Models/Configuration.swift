@@ -23,7 +23,7 @@ public extension Deprecator
         
         /// Handler for when a deprecation is found.
         public let onDeprecationFound: DeprecationFoundClosure
-        public typealias DeprecationFoundClosure = (_ deprecation: Deprecator.Deprecation) -> Void
+        public typealias DeprecationFoundClosure = (_ deprecation: Deprecator.Deprecation, _ isRequired: Bool) -> Void
         
         /// Handler for when no deprecation is found.
         public let onNoDeprecationFound: NoDeprecationFoundClosure
